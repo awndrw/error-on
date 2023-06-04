@@ -1,0 +1,31 @@
+{
+  "name": "error-on",
+  "version": "0.0.1",
+  "description": "Throw error when imported from React Server Components or Client Components",
+  "author": {
+    "name": "Andrew Wiggin",
+    "email": "andrew@wiggin.dev"
+  },
+  "keywords": [
+    "react",
+    "server components",
+    "next"
+  ],
+  "license": "MIT",
+  "files": [
+    "client/index.js",
+    "client/empty.js",
+    "server/index.js",
+    "server/error.js"
+  ],
+  "exports": {
+    "./client": {
+      "default": "./client/index.js",
+      "react-server": "./client/empty.js"
+    },
+    "./server": {
+      "default": "./server/index.js",
+      "react-server": "./server/error.js"
+    }
+  }
+}
